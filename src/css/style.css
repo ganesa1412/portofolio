@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "panton-bold";
+  src: url(../fonts/Panton-Trial-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "panton-light";
+  src: url(../fonts/Panton-Trial-Light.ttf) format("truetype");
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3498db;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2d80b7;
+}
+
+body, html {
+  font-family: "panton-light" !important;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+  font-family: "panton-bold";
+}
+
+.header {
+  padding-top: 2em;
+}
+.header-logo {
+  width: 80px;
+  margin-bottom: 5px;
+}
+.header h1 {
+  color: #3498db;
+  margin: 0px;
+  margin-top: 0.1em;
+  font-size: 2em;
+}
+.header p {
+  margin-left: 1px;
+  font-size: 1em;
+  color: #fafafa;
+}
+.header-photo img {
+  border-radius: 100px !important;
+  border: 1px solid #fafafa;
+  width: 80px;
+}
+.header .social-button {
+  padding-top: 16px;
+}
+.header .social-button .btn {
+  margin-left: 10px;
+}
+
+.main h3 {
+  color: #fafafa;
+  padding: 0.4em;
+}
+.main .portofolio {
+  color: #fafafa;
+  padding: 1em;
+}
+.main .portofolio a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.main .portofolio p {
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+.main .portofolio img {
+  width: 100% !important;
+  transition-duration: 0.25s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .portofolio:hover img {
+  box-shadow: 2px 2px 2px black;
+}
+.main-items:hover .portofolio:not(:hover) img {
+  filter: grayscale(0.9) blur(1px);
+  transform: scale(0.96);
+}
+
+.footer {
+  color: #fafafa;
+  padding-bottom: 2em;
+  font-family: "Segoe UI";
+}
+
+@media (min-width: 320px) and (max-width: 960px) {
+  .header h1 {
+    font-size: 1.4em;
+    margin-top: 0.6em;
+  }
+  .header p {
+    margin-left: 1px;
+    font-size: 0.8em;
+    color: #fafafa;
+  }
+  .header-photo img {
+    border-radius: 100px !important;
+    border: 1px solid #fafafa;
+    width: 60px;
+    margin-left: 0.2em;
+  }
+  .header .social-button {
+    text-align: center !important;
+    padding-bottom: 2em !important;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,148 @@
+@font-face{
+	font-family: 'panton-bold';
+	src: url(../fonts/Panton-Trial-Bold.ttf) format('truetype');
+}
+@font-face{
+    font-family: 'panton-light';
+	src: url(../fonts/Panton-Trial-Light.ttf) format('truetype');
+}
+$font-head : 'panton-bold';
+$font-body : 'panton-light';
+$font-segoe : 'Segoe UI';
+
+$c_blue : #3498db;
+$c_dark_blue : #2d80b7;
+$c_green : #00A44E;
+$c_red : #FF2060;
+$c_white : #fafafa;
+
+/* width */
+::-webkit-scrollbar {
+width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: $c_white;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: $c_blue;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $c_dark_blue;
+}
+  
+
+body, html{
+    font-family: $font-body !important;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1,h2,h3,h4{
+    font-family: $font-head;
+}
+
+.header{
+    // text-align: center;
+    padding-top: 2em;
+    &-logo{
+        width: 80px;
+        margin-bottom: 5px;
+    }
+    h1{
+        color: $c_blue;
+        margin: 0px;
+        margin-top: 0.1em;
+        font-size: 2em;
+    }
+    p{
+        margin-left: 1px;
+        font-size: 1em;
+        color: $c_white;
+    }
+    &-photo{
+        img{
+            border-radius: 100px !important;
+            border: 1px solid $c_white;
+            width: 80px;
+        }
+    }
+    .social-button{
+        padding-top: 16px;
+        .btn{
+            margin-left: 10px;
+        }
+    }
+}
+
+.main{
+    h3{
+        color: $c_white;
+        padding: 0.4em;
+    }
+    .portofolio{
+        color: $c_white;
+        padding: 1em;
+        a{
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        p{
+            font-size: 1.5em;
+            padding: 0.5em;
+        }
+        img{
+            width: 100% !important;
+            transition-duration: 0.25s;
+            object-fit: cover;
+        }
+        &:hover{
+            img{
+                box-shadow: 2px 2px 2px black;
+            }
+        }
+    }
+    &-items:hover{
+        .portofolio:not(:hover){
+            img{
+                filter:grayscale(0.9) blur(1px);
+                transform: scale(0.96);
+            }
+        }
+    }
+}
+
+.footer{
+    color: $c_white;
+    padding-bottom: 2em;
+    font-family: $font-segoe;
+}
+
+@media (min-width: 320px) and (max-width: 960px) {
+    .header{
+        h1{
+            font-size: 1.4em;
+            margin-top: 0.6em;
+        }
+        p{
+            margin-left: 1px;
+            font-size: 0.8em;
+            color: $c_white;
+        }
+        &-photo{
+            img{
+                border-radius: 100px !important;
+                border: 1px solid $c_white;
+                width: 60px;
+                margin-left: 0.2em;
+            }
+        }
+        .social-button{
+            text-align: center !important;
+            padding-bottom: 2em !important;
+        }
+    }
+}
